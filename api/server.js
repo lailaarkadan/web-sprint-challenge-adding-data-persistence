@@ -8,8 +8,8 @@ const server = express();
 
 server.use(express.json());
 
-//server.use('/api/resources', resourcesRouter)
-//server.use('/api/projects', projectsRouter)
-//server.use('/api/tasks', tasksRouter)
+server.use('/api/resources', resourcesRouter)
+server.use('/api/projects', projectsRouter)
+server.use('/api/tasks', tasksRouter)
 
 module.exports = server;
