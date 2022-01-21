@@ -5,7 +5,7 @@ const Project = require('./model.js')
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-    Project.getAll()
+    Project.findById()
         .then((projects) => {
         res.status(200).json(projects)
         })

@@ -6,7 +6,7 @@ const router = express.Router()
 
 
 router.get('/', (req, res, next) => {
-    Task.getAll()
+    Task.findById()
       .then(tasks => res.status(200).json(tasks))
       .catch(err => next(err))
   })

@@ -5,7 +5,7 @@ const Resource = require('./model.js')
 const router = express.Router()
 
 router.get('/', (req, res, next) => {
-  Resource.getAll()
+  Resource.findById()
     .then(resources => res.status(200).json(resources))
     .catch(err => next(err))
 })
